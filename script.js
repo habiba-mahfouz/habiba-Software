@@ -1,4 +1,78 @@
 /*=========================================================================
+    Mobile Navigation Toggle & Scroll Spy
+===========================================================================*/
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navbar = document.querySelector('.navbar');
+
+    if (navToggle && navMenu && navbar) {
+        function toggleNav() {
+            const isOpen = navbar.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            navToggle.classList.toggle('is-active', isOpen);
+        }
+
+        function closeNav() {
+            navbar.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.classList.remove('is-active');
+        }
+
+        navToggle.addEventListener('click', toggleNav);
+
+        // Close when clicking a nav link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeNav);
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && navbar.classList.contains('nav-open')) {
+                closeNav();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navbar.classList.contains('nav-open')) {
+                closeNav();
+            }
+        });
+    }
+
+    // Active link highlighting on scroll
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('#navMenu a[href^="#"]');
+
+    if (sections.length && navLinks.length) {
+        window.addEventListener('scroll', () => {
+            let currentSectionId = '';
+            const scrollPos = window.scrollY + 140;
+
+            sections.forEach(sec => {
+                const top = sec.offsetTop;
+                const height = sec.offsetHeight;
+                if (scrollPos >= top && scrollPos < top + height) {
+                    currentSectionId = sec.getAttribute('id');
+                }
+            });
+
+            if (currentSectionId) {
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href').replace('#', '');
+                    if (href === currentSectionId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        }, { passive: true });
+    }
+});
+
+/*=========================================================================
     Certifications
 ===========================================================================*/
 document.addEventListener('DOMContentLoaded', () => {
