@@ -6,6 +6,10 @@ const certificatesData = [
         title: "Certificate 2",
         image: "certificats/full-stack.jpg"
     },
+        {
+        title: "Certificate 8",
+        image: "certificats/UI UX.png"
+    },
     {
         title: "Certificate 3",
         image: "certificats/Intro_to_AI.png"
@@ -14,10 +18,7 @@ const certificatesData = [
         title: "Certificate 4",
         image: "certificats/AI.png"
     },
-    {
-        title: "Certificate 8",
-        image: "certificats/UI UX.png"
-    }
+
 
 ];
 
@@ -42,5 +43,5 @@ const projectsData = [
         video: "videos/SheMade.mp4",
         github: "https://github.com/habiba-mahfouz/IST-final-project",
         linkedin: "https://lnkd.in/p/eKk9N7KJ"
-    },
+    }
 ];
