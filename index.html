@@ -1,33 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8" dir="ltr">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Habiba Mahfouz - Frontend Developer & UI/UX Designer portfolio showcasing responsive web projects, skills, services, and certifications.">
+    <title>Habiba Mahfouz | Frontend Developer</title>
 
-    <!-- Google Fonts import — must be in <head>, before your <style> -->
+    <!-- Google Fonts import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="navbar">
-        <nav>
-            <a class="active" href="#hero">Habiba Mahfouz</a>
-            <a href="#about">About Me</a>
-            <a href="#projects">My Work</a>
-            <a href="#services">My Services</a>
-            <a href="#footer">Contact Me</a>
-        </nav>
+        <div class="nav-container">
+            <a class="nav-brand" href="#hero">Habiba Mahfouz</a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="navMenu">
+                <a href="#about">About Me</a>
+                <a href="#projects">My Work</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">My Services</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#footer">Contact Me</a>
+            </nav>
+        </div>
     </header>
 
     <section class="hero" id="hero">
+        <div class="hero-photo-wrapper">
+            <div class="hero-photo">
+                <img src="./images/hero.png" alt="Habiba Mahfouz, Frontend Developer">
+            </div>
+        </div>
+
+        <div class="hero-text-wrapper">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Habiba Mahfouz</h1>
+                <p class="hero-role">Frontend Developer</p>
+                <p class="hero-tagline">The website doesn't only represent your business — it feels like you.</p>
+            </div>
+        </div>
 
     </section>
+
     <hr>
 
     <section class="about" id="about">
@@ -36,10 +61,9 @@
         </div>
         <div class="about-content">
             <p class="about-paragraph">
-                Since I was young, I've loved <mark>anything that feels special</mark> from drawing to crochet —
-                something where
+                Since I was young, I've loved <mark>anything that feels special</mark> from drawing to crochet, something where
                 you can see a reflection of your own soul in it. Even when I'm picking out a gift for someone, it can't
-                just be "anything" — <mark>it has to feel like them.</mark>
+                just be "anything" ... <mark>it has to feel like them.</mark>
             </p>
 
             <p class="about-paragraph">
@@ -49,9 +73,7 @@
             </p>
 
             <p class="about-paragraph">
-                If you want <mark>a website that actually feels like you</mark>, not just another template — you're in
-                the right
-                place.
+                If you want <mark>a website that actually feels like you</mark>, not just another template ... you're in the right place.
             </p>
         </div>
     </section>
@@ -62,17 +84,29 @@
             <p class="eyebrow">My Work</p>
             <h2 class="title">PROJECTS</h2>
         </div>
-        <div class="projects-track" id="projectsTrack"> </div>
+        <div class="projects-container">
+            <button class="projects-btn" id="projectsPrevBtn" type="button" aria-label="Previous project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="projects-track" id="projectsTrack"> </div>
+            <button class="projects-btn" id="projectsNextBtn" type="button" aria-label="Next project">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
 
     </section>
     <hr>
-    <section class="skills">
+    <section class="skills" id="skills">
 
-        <h1 class="title">Skills</h1>
+        <h2 class="title">Skills</h2>
 
         <div class="columns">
             <div class="col tech">
-                <h2>Technical Skills:</h2>
+                <h3>Technical Skills:</h3>
                 <ul>
                     <li>HTML5, CSS3, JavaScript (ES6+)</li>
                     <li>Tailwind CSS / Bootstrap</li>
@@ -83,10 +117,10 @@
                 </ul>
             </div>
 
-            <div class="divider"></div>
+            <div class="skills-divider"></div>
 
             <div class="col design">
-                <h2>Design sensibility:</h2>
+                <h3>Design sensibility:</h3>
                 <ul>
                     <li>UX Research &amp; IA</li>
                     <li>Wireframing &amp; Prototyping</li>
@@ -109,22 +143,22 @@
             <div class="card">
                 <div class="badge">1</div>
                 <h3>Design from Scratch</h3>
-                <p><strong>Full websites</strong> — from wireframe to a fully responsive, working site.</p>
-                <p><strong>Landing pages</strong> — single-page designs built for speed and conversion.</p>
+                <p><strong>Full websites</strong>: <br>from wireframe to a fully responsive, working site.</p>
+                <p><strong>Landing pages</strong>: <br>single-page designs built for speed and conversion.</p>
             </div>
 
             <div class="card">
                 <div class="badge">2</div>
                 <h3>UI/UX Design</h3>
-                <p>Interfaces grounded in real user research — from wireframes and prototypes to a finished, intuitive
+                <p>Interfaces grounded in real user research, from wireframes and prototypes to a finished, intuitive
                     experience.</p>
             </div>
 
             <div class="card">
                 <div class="badge">3</div>
-                <h3>Rebrand/Redesign</h3>
-                <p><strong>Code-level</strong> — refreshing an existing site's structure and performance.</p>
-                <p><strong>Brand-level</strong> — defining the colors, fonts, and identity behind it.</p>
+                <h3>Rebrand &amp; Redesign</h3>
+                <p><strong>Code-level</strong>: <br>refreshing an existing site's structure and performance.</p>
+                <p><strong>Brand-level</strong>: <br>defining the colors, fonts, and identity behind it.</p>
             </div>
 
             <div class="card">
@@ -137,11 +171,11 @@
     </section>
     <hr>
 
-    <section class="education">
+    <section class="education" id="education">
         <div class="left">
-            <h1 class="title">Education</h1>
+            <h2 class="title">Education</h2>
             <p class="subtitle">
-                Bachleros in Software Industry &amp; Multimedia - Faculty of Science - Alexandria University
+                Bachelor's in Software Industry &amp; Multimedia - Faculty of Science - Alexandria University
             </p>
         </div>
 
@@ -153,11 +187,11 @@
     </section>
     <hr>
 
-    <section class="certifications">
+    <section class="certifications" id="certifications">
 
         <div class="section-header">
             <p class="eyebrow">My Achievements</p>
-            <h2 class="title">CRETIFICATIONS</h2>
+            <h2 class="title">CERTIFICATIONS</h2>
         </div>
 
         <div class="carousel-wrap">
@@ -193,8 +227,8 @@
             </div>
             <div class="contact-row">
                 <span class="contact-label">Email</span>
-                <a href="mailto:habibamohammedmahfouz@gmail.com" target="_blank"
-                    class="contact-value">habiba mohammed mahfouz</a>
+                <a href="mailto:habibamohammedmahfouz@gmail.com" target="_blank" class="contact-value">habiba mohammed
+                    mahfouz</a>
             </div>
             <div class="contact-row">
                 <span class="contact-label">Whatsapp</span>
