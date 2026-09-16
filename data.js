@@ -29,6 +29,14 @@ const certificatesData = [
 
 const projectsData = [
     {
+        title: "She Made",
+        description: "An ASP.NET Core MVC e-commerce site with Arabic/English support and WhatsApp checkout.",
+        image: "videos/SheMade.mp4",
+        video: "videos/SheMade.mp4",
+        github: "https://github.com/habiba-mahfouz/IST-final-project",
+        linkedin: "https://lnkd.in/p/eKk9N7KJ"
+    },
+    {
         title: "Cinestream",
         description: "A collaborative university team project: A full-stack movie streaming platform simulation built from scratch using PHP, MySQL, and custom CSS.",
         image: "videos/cienstream.mp4",
@@ -36,12 +44,5 @@ const projectsData = [
         github: "https://github.com/habiba-mahfouz",
         linkedin: "https://www.linkedin.com/posts/habiba-mahfouz_cinestream-activity-xxxxxxx"
     },
-    {
-        title: "She Made",
-        description: "An ASP.NET Core MVC e-commerce site with Arabic/English support and WhatsApp checkout.",
-        image: "videos/SheMade.mp4",
-        video: "videos/SheMade.mp4",
-        github: "https://github.com/habiba-mahfouz/IST-final-project",
-        linkedin: "https://lnkd.in/p/eKk9N7KJ"
-    }
+    
 ];
