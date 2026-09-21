@@ -42,7 +42,7 @@ const projectsData = [
         image: "videos/cienstream.mp4",
         video: "videos/cienstream.mp4",
         github: "https://github.com/habiba-mahfouz",
-        linkedin: "https://www.linkedin.com/posts/habiba-mahfouz_cinestream-activity-xxxxxxx"
+        linkedin: "https://www.linkedin.com/posts/habiba-mahfouz_webdevelopment-webprogramming-fullstack-activity-7461869866317385728-n9Xs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFdWTg4BC1DfXdq12kC-KdbVcNdBspejZlM"
     },
     
 ];
