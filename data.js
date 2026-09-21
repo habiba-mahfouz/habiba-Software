@@ -41,7 +41,7 @@ const projectsData = [
         description: "A collaborative university team project: A full-stack movie streaming platform simulation built from scratch using PHP, MySQL, and custom CSS.",
         image: "videos/cienstream.mp4",
         video: "videos/cienstream.mp4",
-        github: "https://github.com/habiba-mahfouz",
+        github: "https://github.com/habiba-mahfouz/cinestream-movie-platform",
         linkedin: "https://www.linkedin.com/posts/habiba-mahfouz_webdevelopment-webprogramming-fullstack-activity-7461869866317385728-n9Xs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFdWTg4BC1DfXdq12kC-KdbVcNdBspejZlM"
     },
     
